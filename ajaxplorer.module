@@ -53,7 +53,7 @@ function ajxp_user_func($op, &$edit, $account, $category = null){
 	if(!$drupHandler->glueCodeFound) return ;
 	switch ($op) {
 		case "login":
-			$drupHandler->onLoginUser($edit["input"]["name"], $edit["input"]["pass"]);
+			$drupHandler->onLoginUser($account->name, $account->pass);
 			break;
 	
 		case "logout":
